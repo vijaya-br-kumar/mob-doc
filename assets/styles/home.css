@@ -1,0 +1,42 @@
+.nav-pull-right{
+    justify-content: flex-end;
+}
+
+.full-width-container{
+    padding: 0px !important;
+}
+
+@media (min-width: 912px) {
+    .carousel-inner {
+        height: calc(100vh - 56px);
+    }
+    .carousel-item img {
+        height: calc(100vh - 56px) !important;
+    }
+}
+
+.human-anatomy{
+    width: auto;
+    height: 665px !important;
+    background: #212529;
+    display: inherit;
+    padding-top: 2% !important;
+}
+
+.human-anatomy img{
+    display: block;
+    margin: auto;
+    height: -webkit-fill-available;
+}
+
+.human-anatomy .map {
+    margin: auto;
+}
+
+.card-body{
+    background: rgba(0, 0, 0, 0.125);
+}
+
+.list-header p{
+    text-align: center;
+}
