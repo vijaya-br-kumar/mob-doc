@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../assets/third-parties/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../../assets/styles/admin/dashboard.css">
+    <link rel="stylesheet" href="../../assets/styles/admin/list.css">
+
+    <script type="application/javascript" src="../../assets/third-parties/jquery/jquery.js"></script>
+    <script type="application/javascript" src="../../assets/third-parties/jquery/jquery-ui.js"></script>
+    <script type="application/javascript" src="../../assets/third-parties/jquery/jquery.maphilight.js"></script>
+    <script type="application/javascript" src="../../assets/third-parties/bootstrap/js/bootstrap.js"></script>
+    <title>MobiDoc | Admin | Dashboard</title>
+</head>
+<body>
+<div id="viewport">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-link"></i> Shortcuts
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-widgets"></i> Overview
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-calendar"></i> Events
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-info-outline"></i> About
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-settings"></i> Services
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-comment-more"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div id="content" class="overlay-scroll">
+        <div class="navbar fixed-top custom-navbar">
+            <div class="col-md-2 logo">
+                <a href="#">
+                    <span>MobiDoc</span>
+                    <img src="../../assets/images/favicon.svg" class="img-logo" alt="">
+                </a>
+            </div>
+            <div class="nav-pull-right">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span>Welcome Vijaya</span>
+                        <a href="#">
+                            <i class="fa fa-sign-out" aria-hidden="true" title="Logout"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row list-header">
+                <div class="col-md-12">
+                    <p>Body Parts List</p>
+                </div>
+            </div>
+            <!--count-->
+            <div class="row">
+                <div class="col-md-12 list-count">
+                    <span>Showing Records (1 - 10 / 10509)</span>
+                </div>
+            </div>
+            <!--data-->
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Handle</th>
+                            <th>show</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td title="View"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--pagination-->
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

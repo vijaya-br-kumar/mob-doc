@@ -1,0 +1,32 @@
+body{
+    background-color: #37474F;
+}
+
+.login-form > div{
+    height: 320px;
+    background-color: #CFD8DC;
+    border-radius: 30px;
+}
+
+.login-form > p{
+    text-align: center;
+    color: #CFD8DC;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 15%;
+}
+
+.login-form input{
+    border-bottom: solid;
+    border-radius: 0;
+    border-bottom-width: 1px;
+    background-color: #CFD8DC;
+}
+
+.login-form > div > p{
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 5%;
+}

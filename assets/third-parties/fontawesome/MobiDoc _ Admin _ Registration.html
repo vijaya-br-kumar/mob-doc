@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://172.16.0.1/boot-doc/templates/admin/registration.html?# -->
+<html lang="en" class="gr__172_16_0_1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" href="./MobiDoc _ Admin _ Registration_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./MobiDoc _ Admin _ Registration_files/login.css">
+    <link rel="stylesheet" href="./MobiDoc _ Admin _ Registration_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./MobiDoc _ Admin _ Registration_files/material-design-iconic-font.min.css">
+    <script type="application/javascript" src="./MobiDoc _ Admin _ Registration_files/jquery.js"></script>
+    <script type="application/javascript" src="./MobiDoc _ Admin _ Registration_files/jquery-ui.js"></script>
+    <script type="application/javascript" src="./MobiDoc _ Admin _ Registration_files/bootstrap.js"></script>
+    <title>MobiDoc | Admin | Registration</title>
+</head>
+<body data-gr-c-s-loaded="true">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-md-4">
+                    <div class="col-md-6 login-form">
+                        <p>MobiDoc | Admin | Registration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-md-4 login-form">
+                    <div class="col-md-6">
+                        <form action="http://172.16.0.1/boot-doc/templates/admin/registration.html?#" class="needs-validation pt-5" novalidate="">
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email" required="">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" required="">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+                        </form>
+<!--                        <p>Invalid Credentials!</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+</body></html>

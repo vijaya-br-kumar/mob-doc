@@ -1,0 +1,58 @@
+.list-header{
+    margin-top: 20px;
+    border-bottom: 1px;
+    border-bottom-color: #dee2e6;
+    border-bottom-style: solid;
+}
+
+.list-header > div > p{
+    font-size: 20px;
+    color: #37474F;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}
+
+.list-header > div > a > .btn-success{
+    float: right;
+    margin-top: 9px;
+}
+
+.list-count{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #37474F;
+}
+
+table{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dee2e6;
+    margin-top: 15px;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px;
+    color: #37474F;
+    font-weight: bold;
+}
+
+.table > thead > tr > th{
+    color: #37474F;
+    font-weight: 500;
+}
+.table > tbody > tr > td{
+    color: #37474F;
+    font-weight: 300;
+}
+.table > tbody > tr > td > a{
+    color: #37474F;
+}
+
+.table > tbody > tr > th{
+    font-weight: 400;
+}
+

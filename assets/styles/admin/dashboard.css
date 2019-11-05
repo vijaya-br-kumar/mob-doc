@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar header a:hover {
+    color: #fff;
+}
+
+/*#sidebar .nav{*/
+
+/*}*/
+
+#sidebar .nav a{
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+}
+
+#sidebar .nav a:hover{
+    background: none;
+    color: #ECEFF1;
+}
+
+#sidebar .nav a i{
+    margin-right: 16px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+}
+.nav>li {
+    width: 250px;
+}
+.nav>li>a{
+    text-decoration: none;
+}
+
+.overlay-scroll{
+    margin-top: 5%;
+}
+.custom-navbar{
+    background-color: #768288;
+            /*#37474F;*/
+    height: 9%;
+}
+
+.logo{
+    margin-left: -9px;
+    margin-top: -20px;
+}
+.logo > a{
+    text-decoration: none;
+}
+.logo > a > img{
+    width: 30px;
+    height: 50px;
+}
+.logo > a > span{
+    color: #CFD8DC;
+    position: relative;
+    font-size: 30px;
+    top: 12px;
+}
+
+.nav-pull-right > ul > li{
+    color: #CFD8DC;
+    list-style: none;
+}
+
+.nav-pull-right > ul > li > i{
+    font-size: 1.5em;
+    margin-left: 12px;
+}
+
+.nav-pull-right > ul > li > a{
+    margin-left: 12px;
+    text-decoration: none;
+    color: #CFD8DC;
+}
+
+.card-link{
+    text-decoration: none;
+    color: #37474F;
+}
+
+
