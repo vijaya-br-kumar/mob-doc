@@ -1,7 +1,12 @@
 <?php
 require __DIR__ . '/../../twig.php';
 require __DIR__ . '/../../dbConnection.php';
+require __DIR__ . '/../sessionManage.php';
 
+if(is_null(checkSessionExist($conn)))
+{
+    header(sprintf("Location: %s%s", ADMIN_PATH, 'login.php'));
+}
 try
 {
     $result = ['status' => true, 'message' => ""];

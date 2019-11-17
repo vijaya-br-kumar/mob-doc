@@ -38,7 +38,7 @@ function verifyLogin(PDO $conn)
         $records->bindParam(':email', $_POST['email']);
         $records->execute();
         $results = $records->fetch(PDO::FETCH_ASSOC);
-        if(count($results) > 0 && password_verify($_POST['password'], $results['password']))
+        if(is_array($results) && count($results) > 0 && password_verify($_POST['password'], $results['password']))
         {
             $_SESSION['user_id'] = base64_encode($results['id']);
         }
