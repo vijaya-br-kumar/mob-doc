@@ -1,0 +1,56 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/admin/list.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row list-header">
+            <div class="col-md-12">
+                <p>Add Body Organs</p>
+            </div>
+        </div>
+        {% include 'admin/components/alert-error-message.html.twig' %}
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <form class="needs-validation" novalidate action="{{ admin_path('BodyOrgans/create.php') }}" method="post">
+                    <div class="form-group row mb-3 col-md-12">
+                        <label for="validationCustom01" class="col-md-2 col-form-label">Organ Name*</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Name" value="" required name="organName">
+                        </div>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">This field is required!</div>
+                    </div>
+                    <div class="form-group row mb-3 col-md-12">
+                        <label for="validationCustom02" class="col-md-2 col-form-label">Belongs To*</label>
+                        <div class="col-md-4">
+                            <select class="custom-select" id="validationCustom02" required aria-required="true" name="bodyPartName">
+                                <option selected value="">Please select the Body Parts</option>
+                                {% for part in bodyParts %}
+                                    <option value="{{ part.id }}">{{ part.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">This field is required!</div>
+                    </div>
+                    <div class="form-group row mb-3 col-md-12">
+                        <label for="validationCustom01" class="col-md-2 col-form-label">Image Path*</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Image Path" value="" required name="imagePath">
+                        </div>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">This field is required!</div>
+                    </div>
+                    <button class="btn btn-success" type="submit">
+                        <i class="fa fa-save"></i><span>&nbsp;</span>Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% include 'admin/components/form-validation.html.twig' %}
+{% endblock %}

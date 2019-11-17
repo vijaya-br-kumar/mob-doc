@@ -1,35 +1,48 @@
 <?php
 require_once(__DIR__.'/../constants.php');
 require_once(__DIR__.'/../dbConnection.php');
+require __DIR__ . '/../twig.php';
 require_once('sessionManage.php');
 
-$result = checkSessionExist($conn);
-if($result)
+checkLogin($conn, $twig);
+
+function checkLogin(PDO $conn, \Twig\Environment $twig)
 {
-    header('Location: ../../templates/admin/dashboard.html');
-}
-else
-{
-    if($_SERVER['REQUEST_METHOD'] == POST_METHOD)
+    $result = checkSessionExist($conn);
+    if($result)
     {
-        $result = verifyLogin($conn);
-        if(count($result) > 0)
-        {
-            header('Location: ../../templates/admin/dashboard.html');
-        }
-        else
-        {
-            redirectLogin();
-        }
+        header(sprintf("Location: %s%s", ADMIN_PATH, 'dashboard.php'));
     }
     else
     {
-        redirectLogin();
-    }
+        if($_SERVER['REQUEST_METHOD'] == POST_METHOD)
+        {
+            $result = verifyLogin($conn);
+            if($result && count($result) > 0)
+            {
+                header(sprintf("Location: %s%s", ADMIN_PATH, 'dashboard.php'));
+            }
+            else
+            {
+                redirectLogin($twig, ['loginError' => true]);
+            }
+        }
+        else
+        {
+            redirectLogin($twig);
+        }
 
+    }
 }
 
-function redirectLogin()
+function redirectLogin(\Twig\Environment $twig, $result = [])
 {
-    header('Location: ../../templates/admin/login.html');
+    try
+    {
+        echo $twig->render('admin/login.html.twig', $result);
+    }
+    catch (\Exception $exception)
+    {
+        die(sprintf("Error occurred: %s", $exception->getMessage()));
+    }
 }

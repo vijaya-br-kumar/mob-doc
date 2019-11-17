@@ -11,7 +11,7 @@ body{
 .login-header{
     text-align: center;
     color: #CFD8DC;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 2em;
     margin-top: 15%;
 }
@@ -26,7 +26,7 @@ body{
 .login-form > div > p{
     text-align: center;
     color: #ff0000;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 1em;
     margin-top: 5%;
 }

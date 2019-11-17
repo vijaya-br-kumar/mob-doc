@@ -1,0 +1,50 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/admin/list.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row list-header">
+            <div class="col-md-4">
+                <p>View Body Part Details</p>
+            </div>
+            <div class="col-md-8">
+                <a href="{{ admin_path('BodyParts/list.php') }}">
+                    <button class="btn btn-success">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i> Back to list
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!--data-->
+        {% include 'admin/components/alert-success-message.html.twig' %}
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th width="25%">Id</th>
+                            <td>{{ data.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td>{{ data.name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <button class="btn btn-success">
+                        <i class="fa fa-edit" aria-hidden="true"></i> Edit
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

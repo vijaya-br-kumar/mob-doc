@@ -1,0 +1,38 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 p-3">
+                <a href="{{ admin_path('BodyParts/list.php') }}" class="card-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Body Parts List</h5>
+                            <p class="card-text">Click to view the list of body parts.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 p-3">
+                <a href="{{ admin_path('BodyOrgans/list.php') }}" class="card-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Body Organs List</h5>
+                            <p class="card-text">Click to view the list of body organs.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 p-3">
+                <a href="{{ admin_path('Disease/list.php') }}" class="card-link">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Diseases List</h5>
+                            <p class="card-text">Click to view the list of Diseases.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

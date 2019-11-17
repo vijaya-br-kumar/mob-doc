@@ -1,0 +1,61 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/admin/list.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row list-header">
+            <div class="col-md-12">
+                <p>Body Organs List</p>
+            </div>
+        </div>
+        {% include 'admin/components/alert-info-message.html.twig' %}
+        <!--count-->
+        {% if (data | length) > 0 %}
+            <div class="row">
+                <div class="col-md-10 list-count">
+                    <span>Total Count: ({{data | length}})</span>
+                </div>
+                <div class="col-md-2 list-count">
+                    <a href="{{ admin_path('BodyOrgans/create.php') }}" target="_blank">
+                        <button class="btn btn-success" type="submit">
+                            <i class="fa fa-plus"></i><span>&nbsp;</span>Add New
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!--data-->
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Belongs to</th>
+                            <th>Image Path</th>
+                            <th>show</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for row in data %}
+                            <tr>
+                                <td>{{ row.id }}</td>
+                                <td>{{ row.name }}</td>
+                                <td>{{ row.partName }}</td>
+                                <td>{{ row.imagePath }}</td>
+                                <td title="View"><a href="{{ admin_path('BodyOrgans/show.php?id='~row.id) }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                                <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
