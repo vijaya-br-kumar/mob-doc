@@ -11,6 +11,7 @@ $twig = new Environment($loader);
 $twig->addFunction(new \Twig\TwigFunction('asset', 'asset'));
 $twig->addFunction(new \Twig\TwigFunction('admin_path', 'adminPath'));
 $twig->addFilter(new \Twig\TwigFilter('var_dump', 'dumpData'));
+$twig->addFunction(new \Twig\TwigFunction('current_user', 'getCurrentUser'));
 
 function asset($path = "")
 {
@@ -25,4 +26,9 @@ function adminPath($path = "")
 function dumpData($data)
 {
     var_dump($data);
+}
+
+function getCurrentUser()
+{
+    return $_SESSION['user_email'] ?? "";
 }

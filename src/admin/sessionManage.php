@@ -41,8 +41,15 @@ function verifyLogin(PDO $conn)
         if(is_array($results) && count($results) > 0 && password_verify($_POST['password'], $results['password']))
         {
             $_SESSION['user_id'] = base64_encode($results['id']);
+            $_SESSION['user_email'] = $results['email'];
         }
         $user = $results;
     }
     return $user;
+}
+
+function logout()
+{
+    session_unset();
+    session_destroy();
 }

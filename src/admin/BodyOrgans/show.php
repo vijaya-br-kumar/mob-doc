@@ -17,8 +17,7 @@ try
     }
     else
     {
-        var_dump("data not found");die;
-        header(sprintf("Location: %s%s", ADMIN_PATH, 'BodyParts/show.php'));
+        header(sprintf("Location: %s%s", ADMIN_PATH, 'BodyOrgans/list.php'));
     }
 }
 catch (\Exception $exception)

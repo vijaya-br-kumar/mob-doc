@@ -8,8 +8,8 @@
     <div class="nav-pull-right">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <span>Welcome Vijaya</span>
-                <a href="#">
+                <span>Welcome {{ current_user() }}</span>
+                <a href="{{ admin_path('logout.php') }}">
                     <i class="fa fa-sign-out" aria-hidden="true" title="Logout"></i>
                 </a>
             </li>

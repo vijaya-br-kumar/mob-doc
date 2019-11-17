@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/../twig.php';
 require __DIR__ . '/sessionManage.php';
+require_once(__DIR__.'/../dbConnection.php');
+
 
 if(is_null(checkSessionExist($conn)))
 {
