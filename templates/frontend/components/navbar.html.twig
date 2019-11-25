@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-12 p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="{{ frontend_path('index.php') }}">
+                <span>MobiDoc</span>
+                <img src="{{ asset('images/favicon.svg') }}" class="logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse nav-pull-right" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ frontend_path('index.php') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ frontend_path('body.php') }}">Body</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ frontend_path('head.php') }}">Head</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ frontend_path('arms.php') }}">Arms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ frontend_path('legs.php') }}">Legs</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

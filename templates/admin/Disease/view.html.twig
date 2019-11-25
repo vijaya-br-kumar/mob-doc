@@ -35,7 +35,7 @@
                         </tr>
                         <tr>
                             <th>Organ Name</th>
-                            <td>{{ data.name }}</td>
+                            <td>{{ data.organName }}</td>
                         </tr>
                         <tr>
                             <th>Image Path</th>
@@ -48,6 +48,10 @@
                         <tr>
                             <th>Prescription</th>
                             <td>{{ data.prescription }}</td>
+                        </tr>
+                        <tr>
+                            <th>Image</th>
+                            <td><img src="{{ asset(data.imagePath) }}" class="display-image" alt="..."></td>
                         </tr>
                     </tbody>
                 </table>

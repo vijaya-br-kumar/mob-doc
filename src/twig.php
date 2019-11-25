@@ -12,6 +12,7 @@ $twig->addFunction(new \Twig\TwigFunction('asset', 'asset'));
 $twig->addFunction(new \Twig\TwigFunction('admin_path', 'adminPath'));
 $twig->addFilter(new \Twig\TwigFilter('var_dump', 'dumpData'));
 $twig->addFunction(new \Twig\TwigFunction('current_user', 'getCurrentUser'));
+$twig->addFunction(new \Twig\TwigFunction('frontend_path', 'frontendPath'));
 
 function asset($path = "")
 {
@@ -31,4 +32,9 @@ function dumpData($data)
 function getCurrentUser()
 {
     return $_SESSION['user_email'] ?? "";
+}
+
+function frontendPath($path = "")
+{
+    return sprintf("%s%s", FRONTEND_PATH, $path);
 }

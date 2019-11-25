@@ -41,6 +41,10 @@
                             <th>Image Path</th>
                             <td>{{ data.imagePath }}</td>
                         </tr>
+                        <tr>
+                            <th>Image</th>
+                            <td><img src="{{ asset(data.imagePath) }}" class="display-image" alt="..."></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

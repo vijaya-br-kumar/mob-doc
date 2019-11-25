@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../assets/third-parties/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../../assets/styles/home.css">
+        <script type="application/javascript" src="../../assets/third-parties/jquery/jquery.js"></script>
+        <script type="application/javascript" src="../../assets/third-parties/jquery/jquery-ui.js"></script>
+        <script type="application/javascript" src="../../assets/third-parties/jquery/jquery.maphilight.js"></script>
+        <script type="application/javascript" src="../../assets/third-parties/bootstrap/js/bootstrap.js"></script>
+        <title>BootDoc | Home</title>
+    {% endblock %}
+</head>
+<body>
+{% block wholeBody %}
+    <div class="container-fluid">
+{#        {% block navbar %}#}
+{#            <!-- Navbar -->#}
+            {% include 'frontend/components/navbar.html.twig' %}
+{#        {% endblock %}#}
+        {% block body %}
+            <!-- Content -->
+            {% include 'frontend/components/carousel.html.twig' %}
+            {% include 'frontend/components/anatomy.html.twig' %}
+        {% endblock %}
+
+    </div>
+    {% block javascripts %}
+        <script>
+            $(document).ready(function(){
+                $('.map').maphilight();
+            });
+        </script>
+    {% endblock %}
+{% endblock %}
+</body>
+</html>

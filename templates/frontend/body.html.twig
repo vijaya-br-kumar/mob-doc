@@ -1,0 +1,29 @@
+{% extends 'frontend/base.html.twig' %}
+
+{% block body %}
+    <div class="row list-header">
+        <div class="col-lg-12 pt-4">
+            <p class="body-page-title">Body Parts</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <hr>
+        </div>
+    </div>
+    {% include 'frontend/components/alert-error-message.html.twig' %}
+    <div class="row">
+        {% for data in result.data %}
+            <div class="col-lg-3 p-3">
+                <a href="{{ frontend_path('disease.php'~'?id='~data.id) }}">
+                    <div class="card">
+                        <img src="{{ asset(data.imagePath) }}" class="card-img-top display-image" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ data.name }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

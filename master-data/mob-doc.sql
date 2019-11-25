@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql_docker
--- Generation Time: Nov 17, 2019 at 02:15 PM
+-- Generation Time: Nov 25, 2019 at 04:59 PM
 -- Server version: 5.7.28
 -- PHP Version: 7.2.23
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `test`
+-- Database: `mob-doc`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,8 @@ CREATE TABLE `body_disease` (
 --
 
 INSERT INTO `body_disease` (`id`, `name`, `description`, `prescription`, `image_path`, `body_organs`) VALUES
-(1, 'Mouth Ulcer', 'Mouth Ulcer is caused by the Excessive heat in the body', 'Use the B-Complex tablets', '/images/mouthUlcer.jpg', 3);
+(1, 'Mouth Ulcer', 'Mouth Ulcer is caused by the Excessive heat in the body', 'Use the B-Complex tablets', 'images/mouth-ulcer.jpeg', 3),
+(2, 'Tooth ace', 'Tooth ace is caused by excessive bacteria in the mouth', 'Use the  clove oil or the rinse your mouth using the salt water', 'images/tooth-ache.jpeg', 3);
 
 -- --------------------------------------------------------
 
@@ -62,10 +63,19 @@ CREATE TABLE `body_organs` (
 --
 
 INSERT INTO `body_organs` (`id`, `name`, `image_path`, `body_parts`) VALUES
-(1, 'Eyes', '/images/eyes.jpg', 1),
-(3, 'Mouth', '/images/mouth.jpg', 1),
-(4, 'Nose', '/images/nose.jpg', 1),
-(5, 'Ears', '/images/ears.jpg', 1);
+(1, 'Eyes', 'images/eyes.jpeg', 1),
+(3, 'Mouth', 'images/mouth.jpeg', 1),
+(4, 'Nose', 'images/nose.jpeg', 1),
+(5, 'Ears', 'images/ears.jpeg', 1),
+(6, 'Shoulder', 'images/shoulder.jpeg', 3),
+(7, 'Elbow', 'images/elbow.jpeg', 3),
+(8, 'Chest', 'images/chest.jpeg', 4),
+(9, 'stomach', 'images/stomach.jpeg', 4),
+(10, 'Knee', 'images/knees.jpeg', 2),
+(11, 'Anklet', 'images/anklet.jpeg', 2),
+(12, 'Thighs', 'images/thighs.jpeg', 2),
+(13, 'Heels', 'images/heels.jpeg', 2),
+(14, 'Wrist', 'images/wrist.jpeg', 3);
 
 -- --------------------------------------------------------
 
@@ -83,6 +93,8 @@ CREATE TABLE `body_parts` (
 --
 
 INSERT INTO `body_parts` (`id`, `name`) VALUES
+(3, 'Arms'),
+(4, 'Body'),
 (1, 'Head'),
 (2, 'Leg');
 
@@ -147,19 +159,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `body_disease`
 --
 ALTER TABLE `body_disease`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `body_organs`
 --
 ALTER TABLE `body_organs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `body_parts`
 --
 ALTER TABLE `body_parts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

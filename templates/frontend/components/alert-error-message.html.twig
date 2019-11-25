@@ -1,0 +1,7 @@
+{% if ((result.status == false) or (result.status and (result.data | length) <= 0)) and result.message is defined%}
+    <div class="row">
+        <div class="alert alert-danger col-lg-12" role="alert">
+            {{ result.message }}
+        </div>
+    </div>
+{% endif %}

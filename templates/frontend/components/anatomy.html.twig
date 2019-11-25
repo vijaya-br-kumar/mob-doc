@@ -1,0 +1,18 @@
+<div class="row human-anatomy">
+    <div class="col-lg-12 p-0">
+        <img id="human-anatomy" src="{{ asset('images/human-anatomy.png') }}" usemap="#human" class="map">
+        <map name="human">
+            <!--                    <area target="http://google.com" alt="forehead" title="forehead" href="#" coords="410,680 410,660 450,660 450,680" shape="poly">-->
+            <!--                    <area target="http://google.com" alt="forehead" title="forehead" href="#" coords="30,100, 140,50, 290,220, 180,280" shape="poly">-->
+            <!--                    <area target="_self" alt="forehead" title="forehead" href="#" coords="50,50, 170,50, 290,220, 180,280" shape="poly">-->
+            <area target="_self" alt="head" title="head" href="{{ frontend_path('head.php') }}" coords="160,50,49" shape="circle" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--face -->
+            <area target="_self" alt="left-arm" title="left-arm" href="{{ frontend_path('arms.php') }}" coords="60,105,100,410" shape="rect" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--right hand -->
+            <area target="_self" alt="right-arm" title="right-arm" href="{{ frontend_path('arms.php') }}" coords="220,105,260,410" shape="rect" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--left hand -->
+            <area target="_self" alt="body" title="body" href="{{ frontend_path('body.php') }}" coords="105,155,215,360" shape="rect" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--body -->
+            <area target="_self" alt="right-leg" title="right-leg" href="{{ frontend_path('legs.php') }}" coords="100,360,158,638" shape="rect" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--left leg -->
+            <area target="_self" alt="left-leg" title="left-leg" href="{{ frontend_path('legs.php') }}" coords="162,360,220,638" shape="rect" data-maphilight='{"strokeColor":"74716E","strokeWidth":2,"fillColor":"E5E5E5","fillOpacity":0.2}'> <!--right leg -->
+            <!--                    <area  alt="" title="" href="http://www.image-maps.com/" shape="poly" coords="209,210,168,216,144,230,129,258,126,287,128,316,132,341,129,371,127,400,127,426,138,463,142,478,149,506,143,549,140,583,142,617,145,648,147,672,147,695,140,744,139,763,148,786,157,799,172,814,178,770,187,754,193,730,202,582,212,426" target="_self"     />-->
+        </map>
+    </div>
+</div>
+</div>

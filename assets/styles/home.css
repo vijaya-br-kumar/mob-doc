@@ -40,3 +40,17 @@
 .list-header p{
     text-align: center;
 }
+
+.logo {
+    width: 50px;
+}
+
+.body-page-title{
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.display-image {
+    height: 300px !important;
+}
