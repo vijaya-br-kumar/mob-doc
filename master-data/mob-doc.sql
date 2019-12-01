@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql_docker
--- Generation Time: Nov 25, 2019 at 04:59 PM
+-- Generation Time: Dec 01, 2019 at 03:57 PM
 -- Server version: 5.7.28
 -- PHP Version: 7.2.23
 
@@ -107,17 +107,18 @@ INSERT INTO `body_parts` (`id`, `name`) VALUES
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL,
   `email` varchar(250) NOT NULL DEFAULT '',
-  `password` varchar(200) NOT NULL DEFAULT ''
+  `password` varchar(200) NOT NULL DEFAULT '',
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(1, 'admin@admin.com', '$2y$10$4y4DVaxQGA1HRrE8vAvXwOW4EvHDXYD4asoJ0FabqFDLAeJPJuZyK'),
-(2, 'email123@email.com', '$2y$10$4y4DVaxQGA1HRrE8vAvXwOW4EvHDXYD4asoJ0FabqFDLAeJPJuZyK'),
-(3, 'test', '$2y$10$TZZWc65VgklBR9pmfUdBg.4lLQuL7BjGO22cpcS0XdKIBsHiQZd4a');
+INSERT INTO `users` (`id`, `email`, `password`, `first_name`, `last_name`) VALUES
+(1, 'admin@admin.com', '$2y$10$4y4DVaxQGA1HRrE8vAvXwOW4EvHDXYD4asoJ0FabqFDLAeJPJuZyK', 'admin', 'admin'),
+(9, 'adm@adm.com', '$2y$10$rS/cXVlJ2OClDq/0z0PK..O1RMCqTt/3hwk8PxKwLknFiDnF3yAGa', 'aasd', 'asd');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +150,8 @@ ALTER TABLE `body_parts`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email_unique` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -177,7 +179,7 @@ ALTER TABLE `body_parts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
