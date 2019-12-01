@@ -36,7 +36,6 @@
                             <th>Id</th>
                             <th>Name</th>
                             <th>show</th>
-                            <th>Edit</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,7 +44,6 @@
                                 <td>{{ row.id }}</td>
                                 <td>{{ row.name }}</td>
                                 <td title="View"><a href="{{ admin_path('BodyParts/show.php?id='~row.id) }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
-                                <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
                             </tr>
                         {% endfor %}
                         </tbody>

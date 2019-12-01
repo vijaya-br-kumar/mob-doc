@@ -1,0 +1,60 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block head %}
+    {{ parent() }}
+{#    <link rel="stylesheet" href="{{ asset('styles/admin/login.css') }}">#}
+    <link rel="stylesheet" href="{{ asset('styles/admin/registration.css') }}">
+{% endblock %}
+
+{% block wholeBody %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-md-4">
+                    <div class="col-md-6 rego-form">
+                        <p class="rego-header">MobiDoc | Admin | Registration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-md-4 rego-form">
+                    <div class="col-md-6">
+                        <form action="{{ admin_path('registration.php') }}" class="needs-validation pt-5" novalidate method="post">
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" id="firstName" required name="firstName">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" class="form-control" id="lastName" required name="lastName">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email" required name="email">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" required name="password">
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">This field is required!</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+                        </form>
+                        {% if registrationError is defined and registrationError and message is defined %}
+                            <p>{{ message }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'admin/components/form-validation.html.twig' %}
+{% endblock %}

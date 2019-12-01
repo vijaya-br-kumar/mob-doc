@@ -38,7 +38,6 @@
                             <th>Belongs to</th>
                             <th>Image Path</th>
                             <th>show</th>
-                            <th>Edit</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,7 +48,6 @@
                                 <td>{{ row.organName }}</td>
                                 <td>{{ row.imagePath }}</td>
                                 <td title="View"><a href="{{ admin_path('Disease/show.php?id='~row.id) }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
-                                <td title="View"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
                             </tr>
                         {% endfor %}
                         </tbody>
